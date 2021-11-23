@@ -1,0 +1,35 @@
+<p>Listado de Héroes:</p>
+<!-- El ngfor funciona cómo un ciclo foreach -->
+<ul>
+    <li *ngFor="let heroe of heroes; let i = index">
+
+       {{i + 1}}.- {{heroe}}
+
+    </li>
+</ul>
+<hr>
+<div *ngIf="unHeroeFueBorrado(); else noBorrado">
+    <h2>El heroe borrado es: <small>{{ heroeBorrado }}</small></h2>
+
+</div>
+<ng-template #noBorrado>
+    <h2>No se ha borrado ningun Héroe</h2>
+
+</ng-template>
+
+<!-- <div *ngIf="!unHeroeFueBorrado()"> -->
+    <!-- <h2>No se ha borrado ningun Heroé</h2> -->
+<!--  -->
+<!-- </div> -->
+
+
+<button (click)="borrarHeroe(1)" > Borrar </button>
+<button (click)="borrarHeroe1()" > Borrar 1</button>
+
+<!-- Esto es similar al ngfor -->
+<!-- let i: number = 0 -->
+<!-- foreach(let heroe of heroes){ -->
+    <!-- imprimir el elemento <li> -->
+    <!-- i = i + 1; -->
+<!--  -->
+<!-- } -->

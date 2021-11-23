@@ -1,0 +1,25 @@
+<h1>{{ nombre }}</h1>
+
+<dl>
+    <td> Nombre: </td>
+    <dd> {{ nombre }} </dd>
+
+    <td> Edad: </td>
+    <dd> {{ edad }} </dd>
+
+    <td> Función: </td>
+    <dd> {{ obtenerNombre() }} </dd>
+
+    <td> Capitalizado: </td>
+    <dd> {{ nombre.toUpperCase() }} </dd>
+
+    <td> Capitalizado e impreso con get: </td>
+    <dd> {{ nombreCapitalizado }} </dd>
+
+    <td> Nombre modificado por el método get: </td>
+    <dd> {{ nombreCapitalizado }} </dd>
+
+    <button (click)="cambiarNombre='spiderman'">Cambiar heroe</button>
+    <button (click)="cambiaredad = 20">Cambiar edad</button>
+
+</dl>
